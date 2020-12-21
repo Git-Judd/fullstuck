@@ -1,9 +1,10 @@
 const fastify = require('fastify')({
   logger: true
 });
+const count = process.env.ENVVAR || 'nope';
 
 fastify.get('/', function (request, reply) {
-  reply.send({ doctor: 'spaceman', count: `${process.env.ENVVAR}` });
+  reply.send({ doctor: 'spaceman', count: count });
 });
 
 fastify.listen(3000, function (err, address) {
