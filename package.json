@@ -13,7 +13,6 @@
   },
   "scripts": {
     "dev": "dotenv node index.js",
-    "test": "jest",
-    "ci": "yarn && jest"
+    "test": "jest"
   }
 }
